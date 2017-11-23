@@ -1,9 +1,9 @@
-import java.util.Map;
-
 /**
- * Created by zouchanghong on 2017/10/31.
+ * Created by zouchanghong on 2017/11/22.
  */
-public class main {
+
+import java.util.Map;
+public class user_similarity {
     static int user=0;// user who are more simlarity to predict user
 
 
@@ -56,7 +56,7 @@ public class main {
         int cols = matrix[0].length;
         for(int index=0;index< cols;index++){
 
-                average+=matrix[User][index];
+            average+=matrix[User][index];
 
         }
         average = average / cols;
@@ -77,7 +77,7 @@ public class main {
         return predict_value;
     }
 
-    //Caculate error
+    //Caculate mae error
     public static double error(double matrix[][]){
         double sum=0;
         int column=matrix[0].length;
