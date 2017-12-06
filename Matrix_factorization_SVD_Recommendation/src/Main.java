@@ -7,7 +7,7 @@ import java.io.*;
 // SVD method
 public class Main {
 
-    private static void matrix_factorization(
+    public static void matrix_factorization(
             double[] R,double[]  P,double[] Q, int N,
             int M,int K) {
        int steps=5000;
@@ -96,7 +96,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int N=50; //用户数
+         int N=50; //用户数
          int M=10; //物品数
 
          int K=10; //主题个数
