@@ -75,13 +75,13 @@ public class collaborative_filtering {
     }
 
     //Caculate error
-    public static double error(double matrix[][]){
+    public static double error(double matrix[][],double realmatrix[][]){
         double sum=0;
         int column=matrix[0].length;
         int total_user=matrix.length;
         for(int j=0;j<total_user;j++){
             for(int i=0;i<column;i++){
-                sum += Math.abs(predict(matrix,j,i)-matrix[j][i]);
+                sum += Math.abs(predict(matrix,j,i)-realmatrix[j][i]);
             }
         }
         return sum/(column*total_user);
